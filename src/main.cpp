@@ -1,5 +1,6 @@
 #include "Eidor.cpp"
 #include "Render/Shader.h"
+#include "Location/Location.h"
 
 #include <vector>
 #include <math.h>
@@ -77,6 +78,13 @@ int main(void)
     rect.set_Size(a_t::Vector3D_f(100.0f, 100.0f, 0.0f));
 
 	Shader_Program shader = Shader_Program("E:/project/Si_Or/src/Render/Shaders/Basic_vertex.txt", "E:/project/Si_Or/src/Render/Shaders/Basic_fragment.txt");
+
+
+    Location loc(a_t::Vector2D_f(10.0f, 10.0f));
+
+    loc.set_Elements_Location(110, 170, 255);
+    loc.generate_Location(true);
+    loc.show_Main_Location();
     
     /* Loop until the user closes the window */
     while (!glfwWindowShouldClose(pWindow))
