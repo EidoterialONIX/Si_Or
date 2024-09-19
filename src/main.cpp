@@ -7,7 +7,7 @@
 
 Options _option;
 
-Draw_on_screen drawing = Draw_on_screen(Vector_3<float>(_option.WINDOW_SIZE[0], _option.WINDOW_SIZE[1], 0.0f));
+Draw_on_screen drawing = Draw_on_screen(a_t::Vector3D_f(_option.WINDOW_SIZE[0], _option.WINDOW_SIZE[1], 0.0f));
 
 
 
@@ -73,8 +73,8 @@ int main(void)
 
     Rect rect;
 
-    rect.set_Position(Vector_3<float>(100.0f, 100.0f, 0.0f));
-    rect.set_Size(Vector_3<float>(100.0f, 100.0f, 0.0f));
+    rect.set_Position(a_t::Vector3D_f(100.0f, 100.0f, 0.0f));
+    rect.set_Size(a_t::Vector3D_f(100.0f, 100.0f, 0.0f));
 
 	Shader_Program shader = Shader_Program("E:/project/Si_Or/src/Render/Shaders/Basic_vertex.txt", "E:/project/Si_Or/src/Render/Shaders/Basic_fragment.txt");
     

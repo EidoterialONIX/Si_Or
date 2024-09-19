@@ -35,8 +35,6 @@ Shader_Program::Shader_Program(const char* vertex_path, const char* fragment_pat
     const char* vertex_shader = vertex_shader_code.c_str();
     const char* fragment_shader = fragment_shader_code.c_str();
 
-    std::cout << fragment_shader << std::endl;
-
     GLuint vertex_sh = 0;
     vertex_sh = glCreateShader(GL_VERTEX_SHADER);
 
