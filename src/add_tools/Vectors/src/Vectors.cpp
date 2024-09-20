@@ -55,6 +55,61 @@ a_t::Vector2D_f a_t::Vector2D_f::operator/(Vector2D_f v) {
 /// //////////
 
 
+/// VECTOR2D_I
+/// //////////
+
+a_t::Vector2D_i::Vector2D_i(int x, int y) {
+	this->x = x; this->y = y;
+
+}
+
+void a_t::Vector2D_i::operator=(Vector2D_i v) {
+	this->x = v.x; this->y = v.y;
+
+}
+
+bool a_t::Vector2D_i::operator==(Vector2D_i v) {
+	if (this->x == v.x && this->y == v.y) return true;  else false;
+
+}
+
+void a_t::Vector2D_i::operator+=(Vector2D_i v) {
+	this->x = this->x + v.x; this->y = this->y + v.y;
+
+}
+void a_t::Vector2D_i::operator-=(Vector2D_i v) {
+	this->x = this->x - v.x; this->y = this->y - v.y;
+
+}
+void a_t::Vector2D_i::operator*=(Vector2D_i v) {
+	this->x = this->x * v.x; this->y = this->y * v.y;
+
+}
+void a_t::Vector2D_i::operator/=(Vector2D_i v) {
+	this->x = this->x / v.x; this->y = this->y / v.y;
+
+}
+
+a_t::Vector2D_i a_t::Vector2D_i::operator+(Vector2D_i v) {
+	return Vector2D_i(this->x + v.x, this->y + v.y);
+
+}
+a_t::Vector2D_i a_t::Vector2D_i::operator-(Vector2D_i v) {
+	return Vector2D_i(this->x - v.x, this->y - v.y);
+
+}
+a_t::Vector2D_i a_t::Vector2D_i::operator*(Vector2D_i v) {
+	return Vector2D_i(this->x * v.x, this->y * v.y);
+
+}
+a_t::Vector2D_i a_t::Vector2D_i::operator/(Vector2D_i v) {
+	return Vector2D_i(this->x / v.x, this->y / v.y);
+
+}
+
+/// //////////
+
+
 /// VECTOR3D_F
 /// //////////
 /// 

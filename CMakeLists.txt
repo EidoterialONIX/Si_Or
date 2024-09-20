@@ -4,7 +4,8 @@ project (Si_Or)
 
 add_executable(Si_Or src/main.cpp src/Eidor.cpp 
 							src/Render/Shader.h src/Render/Shader.cpp 
-							src/Location/Location.h src/Location/Location.cpp)
+							src/Location/Location.h src/Location/Location.cpp 
+							src/Location/Map_Location.h src/Location/Map_Location.cpp)
 
 add_subdirectory(external/glad)
 target_link_libraries(Si_Or glad)

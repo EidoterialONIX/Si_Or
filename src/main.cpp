@@ -1,6 +1,7 @@
 #include "Eidor.cpp"
 #include "Render/Shader.h"
 #include "Location/Location.h"
+#include "Location/Map_Location.h"
 
 #include <vector>
 #include <math.h>
@@ -85,6 +86,9 @@ int main(void)
     loc.set_Elements_Location(110, 170, 255);
     loc.generate_Location(true);
     loc.show_Main_Location();
+
+    Map_Location map_location(loc.get_Main_Location());
+    map_location.show_Map_Location();
     
     /* Loop until the user closes the window */
     while (!glfwWindowShouldClose(pWindow))

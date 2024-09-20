@@ -53,7 +53,7 @@ public:
 	Settings get_Settings() const;
 	void set_Settings(float level_smooting);
 
-
+	std::vector<std::vector<int>> get_Main_Location() const;
 
 
 	void show_Main_Location();

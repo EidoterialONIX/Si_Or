@@ -27,6 +27,31 @@ namespace a_t{
 
 	};
 
+	class Vector2D_i {
+	public:
+
+		int x = 0;
+		int y = 0;
+
+		Vector2D_i() = default;
+
+		Vector2D_i(int x, int y);
+
+		void operator=(Vector2D_i v);
+		bool operator==(Vector2D_i v);
+
+		void operator+=(Vector2D_i v);
+		void operator-=(Vector2D_i v);
+		void operator*=(Vector2D_i v);
+		void operator/=(Vector2D_i v);
+
+		Vector2D_i operator+(Vector2D_i v);
+		Vector2D_i operator-(Vector2D_i v);
+		Vector2D_i operator*(Vector2D_i v);
+		Vector2D_i operator/(Vector2D_i v);
+
+	};
+
 	class Vector3D_f {
 	public:
 

@@ -133,6 +133,10 @@ void Location::set_Settings(float level_smoothing) {
 
 }
 
+std::vector<std::vector<int>> Location::get_Main_Location() const {
+	return this->_main_location;
+}
+
 
 void Location::show_Main_Location() {
 
