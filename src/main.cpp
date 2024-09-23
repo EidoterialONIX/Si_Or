@@ -81,14 +81,14 @@ int main(void)
 	Shader_Program shader = Shader_Program("E:/project/Si_Or/src/Render/Shaders/Basic_vertex.txt", "E:/project/Si_Or/src/Render/Shaders/Basic_fragment.txt");
 
 
-    Location loc(a_t::Vector2D_f(10.0f, 10.0f));
+    Location loc(a_t::Vector2D_f(100.0f, 100.0f));
 
     loc.set_Elements_Location(110, 170, 255);
     loc.generate_Location(true);
     loc.show_Main_Location();
 
     Map_Location map_location(loc.get_Main_Location());
-    map_location.show_Map_Location();
+    map_location.show_Map_Location(false);
     
     /* Loop until the user closes the window */
     while (!glfwWindowShouldClose(pWindow))

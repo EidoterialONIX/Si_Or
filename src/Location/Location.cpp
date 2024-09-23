@@ -142,7 +142,7 @@ void Location::show_Main_Location() {
 
 	for (int i{ 0 }; i < this->_size.y; i++) {
 		for (int j{ 0 }; j < this->_size.x; j++) {
-			std::cout << this->_main_location[i][j] << " - ";
+			std::cout << this->_main_location[i][j];
 
 		}
 

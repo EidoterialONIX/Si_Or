@@ -55,12 +55,6 @@ public:
 
 	std::vector<std::vector<int>> get_Main_Location() const;
 
-
 	void show_Main_Location();
-
-
-
-
-
 
 };
