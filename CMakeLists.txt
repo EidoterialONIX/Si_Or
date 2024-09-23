@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.30.0 FATAL_ERROR)
 
 project (Si_Or)
 
-add_executable(Si_Or src/main.cpp src/Eidor.cpp 
+add_executable(Si_Or src/main.cpp src/Eidor.cpp src/Eidor.h  
 							src/Render/Shader.h src/Render/Shader.cpp 
 							src/Location/Location.h src/Location/Location.cpp 
 							src/Location/Map_Location.h src/Location/Map_Location.cpp 

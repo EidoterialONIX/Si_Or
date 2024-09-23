@@ -1,4 +1,7 @@
 #pragma once
+
+#include "Eidor.h"
+#include "Location/Map_Location.h"
 #include "Vectors.h"
 #include <iostream>
 
@@ -25,6 +28,8 @@ private:
 
 	Camera_Configuration _camera_configuration;
 
+	Draw_on_screen Drawing = Draw_on_screen(a_t::Vector3D_f(0.0f, 0.0f, 0.0f));
+
 public:
 
 	Camera(a_t::Vector2D_f size_screen);
@@ -33,12 +38,12 @@ public:
 
 	void change_Zoom(char vector);
 
+	void draw_Camera(Map_Location map_location);
+
 	Camera_Configuration get_Camera_Configuration() const;
 
 	void set_Camera_Configuration(float s_c, a_t::Vector3D_f c_f, float z);
 
 	void show_Camera_Info();
-
-
 
 };

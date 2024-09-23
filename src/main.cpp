@@ -1,4 +1,4 @@
-#include "Eidor.cpp"
+#include "Eidor.h"
 #include "Render/Shader.h"
 #include "Location/Location.h"
 #include "Location/Map_Location.h"
@@ -13,9 +13,6 @@ Options _option;
 Draw_on_screen drawing = Draw_on_screen(a_t::Vector3D_f(_option.WINDOW_SIZE[0], _option.WINDOW_SIZE[1], 0.0f));
 
 Camera camera(a_t::Vector2D_f(_option.WINDOW_SIZE[0], _option.WINDOW_SIZE[1]));
-
-
-
 
 
 

@@ -24,6 +24,15 @@ void Camera::change_Zoom(char vector) {
 
 }
 
+void Camera::draw_Camera(Map_Location map_location) {
+
+
+
+
+
+}
+
+
 Camera_Configuration Camera::get_Camera_Configuration() const {
 	return this->_camera_configuration;
 
