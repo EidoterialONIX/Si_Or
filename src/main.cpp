@@ -2,6 +2,7 @@
 #include "Render/Shader.h"
 #include "Location/Location.h"
 #include "Location/Map_Location.h"
+#include "Camera.h"
 
 #include <vector>
 #include <math.h>
@@ -10,6 +11,8 @@
 Options _option;
 
 Draw_on_screen drawing = Draw_on_screen(a_t::Vector3D_f(_option.WINDOW_SIZE[0], _option.WINDOW_SIZE[1], 0.0f));
+
+Camera camera(a_t::Vector2D_f(_option.WINDOW_SIZE[0], _option.WINDOW_SIZE[1]));
 
 
 
@@ -27,6 +30,22 @@ void glfwKeyCallback(GLFWwindow* pWindow, int key, int scancode, int action, int
 {
     if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
         glfwSetWindowShouldClose(pWindow, GL_TRUE);
+    }
+    else if (key == GLFW_KEY_A && action == GLFW_PRESS) {
+        camera.move_Camera('A');
+        camera.show_Camera_Info();
+    }
+    else if (key == GLFW_KEY_D && action == GLFW_PRESS) {
+        camera.move_Camera('D');
+        camera.show_Camera_Info();
+    }
+    else if (key == GLFW_KEY_W && action == GLFW_PRESS) {
+        camera.move_Camera('W');
+        camera.show_Camera_Info();
+    }
+    else if (key == GLFW_KEY_S && action == GLFW_PRESS) {
+        camera.move_Camera('S');
+        camera.show_Camera_Info();
     }
 }
 
@@ -89,6 +108,8 @@ int main(void)
 
     Map_Location map_location(loc.get_Main_Location());
     map_location.show_Map_Location(false);
+
+    camera.show_Camera_Info();
     
     /* Loop until the user closes the window */
     while (!glfwWindowShouldClose(pWindow))
